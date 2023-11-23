@@ -1,0 +1,87 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "parser": "babel-eslint",
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "eslint-plugin-import-helpers"],
+  "rules": {
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "no-use-before-define": "off",
+    "no-console": "off",
+    "no-undef": "off",
+    "react/prop-types": "warn",
+    "jsx-a11y/label-has-associated-control": "warn",
+    "react/jsx-filename-extension": [
+      1,
+      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+    ],
+    "camelcase": [
+      "error",
+      {
+        "properties": "never",
+        "ignoreDestructuring": true,
+        "ignoreImports": true,
+        "allow": ["UNSAFE_componentWillMount"]
+      }
+    ],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "import-helpers/order-imports": [
+      "warn",
+      {
+        "newlinesBetween": "always",
+        "groups": [
+          "module",
+          [
+            "/^api/",
+            "/^assets/",
+            "/^components/",
+            "/^contexts/",
+            "/^routes/",
+            "/^services/",
+            "/^pages/",
+            "/^utils/"
+          ],
+          ["parent", "sibling", "index"]
+        ],
+        "alphabetize": { "order": "asc", "ignoreCase": true }
+      }
+    ]
+  },
+  "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/extensions": 0,
+    "import/resolver": {
+      "typescript": {} // this loads <rootdir>/tsconfig.json to eslint
+    }
+  }
+}
