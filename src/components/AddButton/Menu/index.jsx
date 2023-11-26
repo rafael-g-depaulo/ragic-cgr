@@ -1,10 +1,10 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { Container, Option } from './styles';
 
 export default function Menu() {
-  const history = useHistory();
+  const history = useNavigate();
 
   return (
     <Container>

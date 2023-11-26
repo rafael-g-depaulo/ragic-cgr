@@ -1,10 +1,10 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import { ButtonContainer, Icon } from './styles';
 
 export default function ReturnButton() {
-  const history = useHistory();
+  const history = useNavigate();
 
   return (
     <ButtonContainer onClick={() => history.push('/')}>

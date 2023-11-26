@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Login from 'pages/Login';
 import MembersIndex from 'pages/MembersIndex';
@@ -12,13 +12,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <BrowserRouter>
-      <Switch>
-        <Route path='/' component={MembersIndex} exact />
-        <Route path='/register/member' component={RegisterMember} />
-        <Route path='/login' component={Login} />
-        <Route path='/signup' component={SignUp} />
-        <Route path='/teams' component={TeamsIndex} />
-      </Switch>
+      <Routes>
+        <Route path='/' element={<MembersIndex />} exact />
+        <Route path='/register/member' element={<RegisterMember />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/signup' element={<SignUp />} />
+        <Route path='/teams' element={<TeamsIndex />} />
+      </Routes>
     </BrowserRouter>
   );
 }
