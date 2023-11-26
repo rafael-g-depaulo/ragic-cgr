@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from '../../routes';
 
 import Logo from 'assets/CjrLogo.png';
 import DefaultButton from 'components/DefaultButton';

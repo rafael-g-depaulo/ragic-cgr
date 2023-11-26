@@ -6,7 +6,7 @@ import {
   FiClock,
   FiUsers,
 } from 'react-icons/fi';
-import { Link } from 'react-router-dom';
+import { Link } from '../../routes';
 
 import Logo from '../../assets/CjrLogo.png';
 import {
